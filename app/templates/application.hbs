@@ -1,3 +1,32 @@
-<h2 id="title">Welcome to Ember</h2>
+{{chart-demo}}
 
-{{outlet}}
+<div class="chart-container">
+      {{horizontal-bar-chart
+        data=content
+      }}
+    </div>
+    <div class="chart-container">
+      {{vertical-bar-chart
+        data=content
+       }}
+    </div>
+    <div class="chart-container">
+      {{pie-chart
+        data=content
+      }}
+    </div>
+    <div class="chart-container">
+      {{scatter-chart
+        data=scatterContent
+        xValueDisplayName="Risk"
+        yValueDisplayName="Return"
+      }}
+    </div>
+    <div class="chart-container">
+      {{time-series-chart
+        barData=timeSeriesBarContent
+        lineData=timeSeriesLineContent
+      }}
+    </div>
+
+    {{outlet}}
